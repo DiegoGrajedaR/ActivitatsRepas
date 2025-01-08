@@ -1,10 +1,27 @@
-﻿namespace MainProgram
+﻿using MyLibrary;
+
+namespace MainProgram
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            try
+            {
+                Console.WriteLine("Introdueix la base del triangle:");
+                int baseTriangle = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Introdueix l'altura del triangle:");
+                int heightTriangle = int.Parse(Console.ReadLine());
+
+                int resultado = numerador / denominador;
+                Console.WriteLine($"El resultado de la división es: {resultado}");
+            }
+            catch
+            {
+                // Si ocurre cualquier excepción, mostramos un mensaje general.
+                Console.WriteLine("Hubo un error. Intenta nuevamente.");
+            }
         }
     }
 }
