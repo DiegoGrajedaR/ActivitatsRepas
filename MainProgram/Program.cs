@@ -9,18 +9,18 @@ namespace MainProgram
             try
             {
                 Console.WriteLine("Introdueix la base del triangle:");
-                int baseTriangle = int.Parse(Console.ReadLine());
+                double baseTriangle = double.Parse(Console.ReadLine());
 
                 Console.WriteLine("Introdueix l'altura del triangle:");
-                int heightTriangle = int.Parse(Console.ReadLine());
+                double heightTriangle = double.Parse(Console.ReadLine());
 
-                int resultado = numerador / denominador;
-                Console.WriteLine($"El resultado de la división es: {resultado}");
+                double resultat = MyMath.CalculateTriangleArea(baseTriangle, heightTriangle);
+                Console.WriteLine($"L'area del triangle és de: {resultat}");
             }
-            catch
+            
+            catch (ArgumentException ex)
             {
-                // Si ocurre cualquier excepción, mostramos un mensaje general.
-                Console.WriteLine("Hubo un error. Intenta nuevamente.");
+                Console.WriteLine($"Error: {ex.Message}");
             }
         }
     }
