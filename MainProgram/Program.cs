@@ -1,10 +1,18 @@
-﻿namespace MainProgram
+﻿using System;
+using MyLibrary;
+
+namespace MainProgram
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Introdueix el nombre de segons:");
+            int totalSeconds = int.Parse(Console.ReadLine());
+           
+            string result = MyMath.SecondsToTime(totalSeconds);
+            Console.WriteLine($"El temps total és de: {result}");
+
         }
     }
 }
