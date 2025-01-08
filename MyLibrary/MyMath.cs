@@ -10,5 +10,15 @@
 
             return $"{hours} hores {minutes} minuts {seconds} segons";
         }
+
+        public static double CalculateTriangleArea(double baseTriangle, double heightTriangle)
+        {
+            if (baseTriangle <= 0 || heightTriangle <= 0)
+            {
+                throw new ArgumentException("La base i l'altura han de ser majors a 0.");
+            }
+
+            return (baseTriangle * heightTriangle) / 2;
+        }
     }
 }
