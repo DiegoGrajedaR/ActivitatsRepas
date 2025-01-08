@@ -20,5 +20,10 @@
 
             return (baseTriangle * heightTriangle) / 2;
         }
+
+        public static double CelsiusToFahrenheit(double celsius)
+        {
+            return (celsius * 9 / 5) + 32;
+        }
     }
 }
