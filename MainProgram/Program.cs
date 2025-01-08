@@ -1,10 +1,23 @@
-﻿namespace MainProgram
+﻿using MyLibrary;
+
+namespace MainProgram
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Introdueix la temperatura en graus Celsius:");
+
+            if (double.TryParse(Console.ReadLine(), out double celsius))
+            {
+                double kelvin = MyMath.CelsiusToKelvin(celsius);
+
+                Console.WriteLine($"{celsius} graus Celsius equival a {kelvin} graus Kelvin.");
+            }
+            else
+            {
+                Console.WriteLine("Nombre no vàlid")
+            }
         }
     }
 }
