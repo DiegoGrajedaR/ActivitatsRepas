@@ -1,4 +1,5 @@
-﻿using MyLibrary;
+﻿using System;
+using MyLibrary;
 
 namespace MainProgram
 {
